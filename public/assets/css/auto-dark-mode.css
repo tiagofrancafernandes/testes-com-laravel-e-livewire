@@ -1,0 +1,11 @@
+/* #Habilitar darkmode em uma página Bootstrap*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bs-dark);
+        color: var(--bs-light);
+    }
+
+    .table{
+        color: var(--bs-light);
+    }
+}

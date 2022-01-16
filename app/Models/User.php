@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static  function search($searchKey)
+    {
+        return self::where('name', 'LIKE', '%' . $searchKey . '%')
+            ->orWhere('email', 'LIKE', '%' . $searchKey . '%');
+    }
 }
